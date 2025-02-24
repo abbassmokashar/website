@@ -1,0 +1,509 @@
+<!doctype html>
+<!-- Dark Themed Website using english language -->
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Website Title -->
+    <title>Abbass Mokashar</title>
+    <!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- CSS file load -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Bootstrap JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    
+    <!-- Floating Social Media Buttons -->
+    <div class="floating-socials">
+      <a href="https://www.linkedin.com/in/abbass-mokashar-185865254/" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://wa.me/+96181069710" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+    <!-- Header/Navbar Section -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <!-- Logo (Left) -->
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo-white.png" alt="Logo" height="70">
+        </a>
+    
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Centered Menu -->
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#web-development">Web Development</a></li>
+                <li><a class="dropdown-item" href="#web-maintenance">Web Maintenance</a></li>
+                <li><a class="dropdown-item" href="#web-consulting">Web Consulting</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+    
+          <!-- Search Bar (Right) -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Banner/Slider Section -->
+    <section class="banner-section">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/Home-slide1.png" class="d-block w-100" alt="home-slide1">
+              </div>
+              <!-- <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="" class="d-block w-100" alt="...">
+              </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <!-- About Section -->
+    <section class="about-section section" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>| About Abbass Mokashar</h2>
+            <p>As a seasoned web developer with a robust background in both WordPress and custom website development, I specialize in creating high-performance, scalable, and visually captivating digital solutions. Over the course of my career, I have successfully designed, developed, and launched more than 30 diverse websites, each tailored to meet the unique needs of my clients. My expertise spans across front-end and back-end development, ensuring that each project is optimized for both user experience and technical efficiency.</p>
+        <p>Driven by a passion for innovation, I stay at the forefront of emerging web technologies, consistently refining my skills to deliver cutting-edge solutions. My commitment to quality and user-centric design principles is reflected in every project I undertake, as I strive to transform client visions into dynamic, functional online experiences. With a meticulous eye for detail and a focus on long-term impact, I am dedicated to delivering web experiences that not only meet but exceed client expectations.</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <img src="img/abbass.jpg" alt="Abbass Mokashar">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="portfolio-section py-5 section" id="portfolio">
+      <div class="container text-center">
+        <h2 class="portfolio-title">My Portfolio</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://sgsal.com" target="_blank" class="portfolio-link">
+                <img src="img/sgsal.png" alt="SGSAL Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Smart Guide Agency</h3>
+              <span class="tag">Web Maintenance, Web Development</span>
+              <p class="description">Smart Guide Agency specializes in custom web development and ongoing site maintenance, providing tailored digital solutions to meet client needs.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://johnnyctaylorjr.com" target="_blank" class="portfolio-link">
+                <img src="img/johnnyctaylor.png" alt="Johnny C. Taylor Jr. Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Johnny C. Taylor Jr.</h3>
+              <span class="tag">Web Maintenance, Web Development</span>
+              <p class="description">Johnny C. Taylor Jr. offers leadership insights and strategic advice, empowering organizations to drive growth and foster inclusive cultures.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://plastilab.com" target="_blank" class="portfolio-link">
+                <img src="img/plastilab.png" alt="Plastilab Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Plastilab</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Plastilab specializes in innovative plastic solutions, providing high-quality materials and services to meet diverse industrial needs.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://hkpseattle.com" target="_blank" class="portfolio-link">
+                <img src="img/hkp.png" alt="HKP Seattle Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">HKP Seattle</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">HKP Seattle delivers exceptional architectural design and planning services, creating innovative, sustainable spaces for communities and businesses.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://trackifydaily.com" target="_blank" class="portfolio-link">
+                <img src="img/trackify.png" alt="Trackify Daily Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Trackify Daily</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Trackify Daily offers advanced tracking solutions to help businesses monitor performance and optimize their daily operations with ease.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://rpsmena.com" target="_blank" class="portfolio-link">
+                <img src="img/rps.png" alt="RPS Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Research & Professional Services</h3>
+              <span class="tag">Web Maintenance, Web Development</span>
+              <p class="description">RPS MENA provides expert consulting and project management services, driving sustainable development and innovation across the MENA region.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://booming-agency.com" target="_blank" class="portfolio-link">
+                <img src="img/booming.png" alt="Booming Agency Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Booming Agency</h3>
+              <span class="tag">Web Maintenance, Web Development</span>
+              <p class="description">Booming Agency specializes in digital marketing and brand development, helping businesses grow and thrive in the online space.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://wearemaverik.com" target="_blank" class="portfolio-link">
+                <img src="img/maverik.png" alt="Maverik Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Maverik</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Maverik creates innovative marketing strategies that elevate brands, focusing on creative solutions to drive engagement and growth.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item">
+              <a href="https://rhythmdynamic.com/" target="_blank" class="portfolio-link">
+                <img src="img/rhythymdynamic.png" alt="Rhythm Dynamic Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Rhythm Dynamic</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Rhythm Dynamic offers cutting-edge technology solutions, helping businesses streamline operations and enhance customer engagement through innovative digital tools.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://statelessmena.com" target="_blank" class="portfolio-link">
+                <img src="img/stateless.png" alt="Stateless Mena Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Stateless Mena</h3>
+              <span class="tag">Web Maintenance</span>
+              <p class="description">Stateless MENA is a platform supporting the Research and Advocacy Network on Statelessness in the Middle East and North Africa region.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://ccg-lb.com" target="_blank" class="portfolio-link">
+                <img src="img/ccg.png" alt="CCG Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Consolidated Consultancy Group</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">CCG Lebanon provides expert consulting and innovative business solutions, helping organizations navigate complex challenges and drive sustainable growth.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://knowledgebox.me" target="_blank" class="portfolio-link">
+                <img src="img/knowledgebox.png" alt="KnowledgeBox Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">KnowledgeBox</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Knowledge Box offers cutting-edge e-learning solutions, empowering individuals and organizations with innovative educational tools and resources.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://ejjeh.com.lb" target="_blank" class="portfolio-link">
+                <img src="img/ejjeh-lb.png" alt="Ejjeh LB Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Ejjeh Lebanon</h3>
+              <span class="tag">Web Development, Web Maintenance</span>
+              <p class="description">A Lebanese fashion retailer offering men's clothing and accessories.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://ejjeh.ae" target="_blank" class="portfolio-link">
+                <img src="img/ejjeh-ae.png" alt="Ejjeh UAE Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Ejjeh UAE</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">A UAE-based fashion retailer specializing in men's clothing and accessories.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://stroberry-adv.com" target="_blank" class="portfolio-link">
+                <img src="img/stroberry.png" alt="Stro'berry Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Stro'berry Advertising</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">A Lebanese creative advertising agency providing branding, digital media, PR, and marketing services.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://metsenergy.com" target="_blank" class="portfolio-link">
+                <img src="img/mets.png" alt="METS Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">METS Energy</h3>
+              <span class="tag">Web Maintenance</span>
+              <p class="description">METS Energy is a Lebanese company specializing in diesel generators and power solutions, offering products and services in diesel, solar, hydro, and hybrid energy.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://rlx.com.lb" target="_blank" class="portfolio-link">
+                <img src="img/rlx.png" alt="RLX Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">RLX</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">RLX Logistics offers comprehensive logistics solutions including freight forwarding, warehousing, customs clearance, and supply chain management, serving clients globally with a focus on efficiency and reliability.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://wahdatouna.org" target="_blank" class="portfolio-link">
+                <img src="img/wahdatouna.png" alt="Wahdatouna Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Wahdatouna Khalasouna</h3>
+              <span class="tag">Web Maintenance</span>
+              <p class="description">Wahdatouna is a Lebanese civil society group dedicated to strengthening civil peace, protecting human rights, and promoting dialogue and acceptance among diverse communities.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://rainmakersemea.com" target="_blank" class="portfolio-link">
+                <img src="img/rainmakers.png" alt="Rainmakers Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Rainmakers</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Rainmakers EMEA specializes in driving business growth through digital marketing, sales strategies, and performance optimization, delivering impactful results across the EMEA region.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://alyafi-ip.com" target="_blank" class="portfolio-link">
+                <img src="img/alyafi.png" alt="Alyafi Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Alyafi IP Group</h3>
+              <span class="tag">Web Maintenance, Web Development</span>
+              <p class="description">Alyafi IP offers intellectual property services, specializing in trademark registration, patent protection, and legal consultation to safeguard innovations and brand identities.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden">
+              <a href="https://cedra.tech" target="_blank" class="portfolio-link">
+                <img src="img/cedra.png" alt="Cedra Tech Project" class="img-fluid">
+                <div class="overlay">
+                  <span class="see-website">See Website</span>
+                </div>
+              </a>
+              <h3 class="title">Cedra Tech</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Cedra Tech provides cutting-edge technology solutions, specializing in custom software development, IT consulting, and digital transformation to enhance business performance and efficiency.</p>
+            </div>
+          </div>
+        </div>
+        <button id="loadMore">Load More</button>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services-section py-5 section" id="services">
+      <div class="container text-center">
+        <h2 class="mb-4 services-title">My Services</h2>
+        <div class="row g-4">
+          <!-- Web Development Service -->
+          <div class="col-md-4" id="web-development">
+            <div class="card h-100 text-center shadow-sm">
+              <img src="img/web-development.jpg" alt="Custom Web Development" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Web Development</h3>
+                <p class="card-text" id="web-dev-text">
+                  Looking for custom web development services? I specialize in building modern, responsive websites that are tailored to your business needs. Whether you need a custom e-commerce site, a portfolio website, or a corporate platform.
+                  <span id="web-dev-full" style="display:none;"> I create websites that not only look great but are optimized for performance, speed, and SEO. My web development services ensure your site is mobile-friendly, search engine optimized, and easy to navigate, providing an exceptional user experience for your visitors.</span>
+                  <a href="javascript:void(0)" class="read-more" onclick="toggleText('web-dev')">Read More</a>
+                  <a href="javascript:void(0)" class="read-less" onclick="toggleText('web-dev')" style="display:none;">Read Less</a>
+                </p>
+                <a href="mailto:abbassmokashar123@gmail.com?subject=Request for a Web Development Quote" class="btn get-quote-btn mt-auto">Get a Quote</a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Web Maintenance Service -->
+          <div class="col-md-4" id="web-maintenance">
+            <div class="card h-100 text-center shadow-sm">
+              <img src="img/web-maintenance.jpg" alt="Website Maintenance Services" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Website Maintenance</h3>
+                <p class="card-text" id="web-maintenance-text">
+                  Keep your website running smoothly and securely with professional web maintenance services. Regular website maintenance is crucial to ensure your site stays updated.
+                  <span id="web-maintenance-full" style="display:none;"> My website maintenance packages include regular updates, security patches, performance improvements, and bug fixes, ensuring your site operates at its best. Stay ahead of potential security risks and improve your website’s user experience with ongoing professional maintenance.</span>
+                  <a href="javascript:void(0)" class="read-more" onclick="toggleText('web-maintenance')">Read More</a>
+                  <a href="javascript:void(0)" class="read-less" onclick="toggleText('web-maintenance')" style="display:none;">Read Less</a>
+                </p>
+                <a href="mailto:abbassmokashar123@gmail.com?subject=Request for a Web Maintenance Quote" class="btn get-quote-btn mt-auto">Get a Quote</a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Web Consulting Service -->
+          <div class="col-md-4" id="web-consulting">
+            <div class="card h-100 text-center shadow-sm">
+              <img src="img/web-consulting.jpg" alt="Web Consulting and Assistance" class="card-img-top">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Web Consulting & Assistance</h3>
+                <p class="card-text" id="web-consulting-text">
+                  Looking for expert web consultation and assistance? Whether you're unsure about which platform to choose, need help optimizing your website for SEO.
+                  <span id="web-consulting-full" style="display:none;"> I’ll help you choose the right tools, strategies, and technologies to enhance your online presence. With professional web assistance, you’ll make informed decisions that drive results and improve your website’s performance.</span>
+                  <a href="javascript:void(0)" class="read-more" onclick="toggleText('web-consulting')">Read More</a>
+                  <a href="javascript:void(0)" class="read-less" onclick="toggleText('web-consulting')" style="display:none;">Read Less</a>
+                </p>
+                <a href="mailto:abbassmokashar123@gmail.com?subject=Request for a Consultation & Assistance Quote" class="btn get-quote-btn mt-auto">Get a Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Go To Top -->
+    <button id="goToTopBtn" class="go-to-top-btn">
+      &#8593; <!--  Top -->
+    </button>    
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-4 section" id="contact">
+      <div class="container">
+          <div class="row">
+              <!-- About Column with Logo -->
+              <div class="col-md-4 mb-3">
+                  <a href="index.html" class="d-block mb-3">
+                      <img src="img/logo-white.png" alt="Abbass Mokashar Logo" height="70">
+                  </a>
+                  <p class="small">
+                      I'm Abbass Mokashar, a passionate web developer creating high-performance, user-centric digital solutions. With over 30 successful projects, I specialize in custom web development and maintenance.
+                  </p>
+              </div>
+              
+              <!-- Offset to Push Quick Links and Contact Right -->
+              <div class="col-md-1 d-none d-md-block"></div> <!-- Empty column for spacing on medium+ screens -->
+
+              <!-- Quick Links Column -->
+              <div class="col-md-3 mb-3">
+                  <h5 class="text-uppercase mb-3" style="color: #25c19b;">Quick Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#about" class="text-light text-decoration-none hover-effect">About</a></li>
+                      <li><a href="#portfolio" class="text-light text-decoration-none hover-effect">Portfolio</a></li>
+                      <li><a href="#services" class="text-light text-decoration-none hover-effect">Services</a></li>
+                      <!-- <li><a href="#" class="text-light text-decoration-none hover-effect">Contact</a></li> -->
+                      <li><a href="files/Abbass Mokashar - Resume.pdf" download class="text-light text-decoration-none hover-effect">Download My CV</a></li>
+                      <li><a href="https://calendly.com/abbassmokashar123/30min" target="_blank" class="text-light text-decoration-none hover-effect">Schedule a Consultation</a></li>
+                  </ul>
+              </div>
+              
+              <!-- Contact Column -->
+              <div class="col-md-4 mb-3">
+                  <h5 class="text-uppercase mb-3" style="color: #25c19b;">Contact</h5>
+                  <ul class="list-unstyled">
+                      <li><i class="bi bi-envelope me-2"></i><a href="mailto:abbassmokashar123@gmail.com" class="text-light text-decoration-none hover-effect">abbassmokashar123@gmail.com</a></li>
+                      <li><i class="bi bi-telephone me-2"></i><a href="tel:+96181069710" class="text-light text-decoration-none hover-effect">+961 81 069 710</a></li>
+                      <li><i class="bi bi-geo-alt me-2"></i><span>Beirut, Lebanon</span></li>
+                      <li><i class="bi bi-clock me-2"></i><span>Mon - Fri, 9 AM - 5 PM (GMT+2)</span></li>
+                  </ul>
+              </div>
+          </div>
+          
+          <!-- Copyright Row -->
+          <div class="row mt-3">
+              <div class="col-12 text-center">
+                  <p class="small mb-0">© 2025 Abbass Mokashar. All Rights Reserved.</p>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <!-- Script file load -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,3 +1,58 @@
+// ========== PORTFOLIO FILTERS ==========
+const filterBtns = document.querySelectorAll('.filter-btn');
+const loadMoreBtn = document.getElementById('loadMore');
+
+const allPortfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+// Remember which items start hidden (beyond first 9)
+const originallyHidden = new Set(allPortfolioItems.filter(item => item.classList.contains('hidden')));
+
+function getCol(item) {
+    return item.closest('.col-md-4, .col-12');
+}
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        const calloutCol = document.querySelector('.maintenance-callout')?.closest('.col-12');
+
+        if (filter === 'all') {
+            // Restore everything to original state
+            allPortfolioItems.forEach(item => {
+                const col = getCol(item);
+                if (originallyHidden.has(item)) {
+                    item.classList.add('hidden');
+                    if (col) col.style.display = '';
+                } else {
+                    item.classList.remove('hidden');
+                    if (col) col.style.display = '';
+                }
+            });
+            if (calloutCol) calloutCol.style.display = '';
+            if (loadMoreBtn) {
+                const stillHidden = document.querySelectorAll('.portfolio-item.hidden').length;
+                loadMoreBtn.style.display = stillHidden ? 'inline-block' : 'none';
+            }
+        } else {
+            // Filter: hide non-matching cols, show matching ones (remove hidden class)
+            allPortfolioItems.forEach(item => {
+                const col = getCol(item);
+                const matches = item.dataset.category === filter;
+                if (matches) {
+                    item.classList.remove('hidden');
+                    if (col) col.style.display = '';
+                } else {
+                    if (col) col.style.display = 'none';
+                }
+            });
+            if (calloutCol) calloutCol.style.display = 'none';
+            if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+        }
+    });
+});
+// ========== END PORTFOLIO FILTERS ==========
+
 // Load More Button Portfolio
 document.getElementById("loadMore").addEventListener("click", function() {
     let hiddenItems = document.querySelectorAll(".portfolio-item.hidden");

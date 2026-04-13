@@ -70,29 +70,39 @@
         </div>
       </div>
     </nav>
-    <!-- Banner/Slider Section -->
-    <section class="banner-section">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/Home-slide1.png" class="d-block w-100" alt="home-slide1">
-              </div>
-              <!-- <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-              </div> -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-eyebrow">WordPress & Shopify Developer · Beirut, Lebanon</p>
+        <h1 class="hero-title">I Build Websites That <span class="hero-accent">Convert</span></h1>
+        <p class="hero-subtitle">Custom websites for businesses across Lebanon, the UAE, and beyond — built for performance, SEO, and real results.</p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn hero-btn-primary">See My Work</a>
+          <a href="https://calendly.com/abbassmokashar123/30min" target="_blank" class="btn hero-btn-secondary">Book a Free Call</a>
+        </div>
+      </div>
+      <!-- Stats Bar -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">40+</span>
+          <span class="stat-label">Websites Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">44+</span>
+          <span class="stat-label">Sites Maintained Monthly</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">4+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">🇱🇧 🇦🇪 🇺🇸</span>
+          <span class="stat-label">Clients Worldwide</span>
+        </div>
+      </div>
     </section>
     <!-- About Section -->
     <section class="about-section section" id="about">
@@ -113,9 +123,18 @@
     <section class="portfolio-section py-5 section" id="portfolio">
       <div class="container text-center">
         <h2 class="portfolio-title">My Portfolio</h2>
-        <div class="row">
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters mb-4">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+          <button class="filter-btn" data-filter="corporate">Corporate &amp; Informative</button>
+          <button class="filter-btn" data-filter="elearning">E-learning &amp; LMS</button>
+          <button class="filter-btn" data-filter="shopify">Shopify</button>
+          <button class="filter-btn" data-filter="custom">Custom Coded</button>
+        </div>
+        <div class="row" id="portfolio-grid">
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="ecommerce">
               <a href="https://basbousgifts.com/" target="_blank" class="portfolio-link">
                 <img src="img/basbous.png" alt="Basbous Gifts" class="img-fluid">
                 <div class="overlay">
@@ -123,12 +142,12 @@
                 </div>
               </a>
               <h3 class="title">Basbous Gifts</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">Basbous Gifts is a versatile e-commerce platform offering a wide variety of products, from home essentials to lifestyle and gift items—handling a high volume of daily orders through a smooth and user-friendly shopping experience.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">One of the largest quick-flip e-commerce stores in the region — handling ~2,000+ orders per day with custom checkout, automatic order export, barcode scanning, custom packing slips, and full WooCommerce optimization.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="elearning">
               <a href="https://edubolt.meraky.dev/" target="_blank" class="portfolio-link">
                 <img src="img/edubolt.png" alt="Edubolt" class="img-fluid">
                 <div class="overlay">
@@ -136,12 +155,12 @@
                 </div>
               </a>
               <h3 class="title">Edubolt</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">EduBolt is a modern e-learning platform delivering hands-on tech courses, guided learning paths, and real-world skill development, helping students learn at their own pace while serving a growing community of active learners.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">LMS platform for online educational and university-preparation courses, with custom tutor registration, course view restriction, Whish payment integration, and certificate issuance.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="elearning">
               <a href="https://edu.meraky.dev/" target="_blank" class="portfolio-link">
                 <img src="img/edumeraky.png" alt="Edu Meraky" class="img-fluid">
                 <div class="overlay">
@@ -149,12 +168,12 @@
                 </div>
               </a>
               <h3 class="title">Edu Meraky</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">Meraky Edu is a modern e-learning platform offering hands-on tech courses, structured learning paths, and real-world skill development, designed to help students build practical experience and join a growing community of learners.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">LMS platform for teaching online tech courses (web development, mobile development, and more) with custom tutor forms, course restrictions, Whish payment, and trusted certificate generation.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="ecommerce">
               <a href="https://glatelier.meraky.dev/" target="_blank" class="portfolio-link">
                 <img src="img/gl.png" alt="GL Atelier" class="img-fluid">
                 <div class="overlay">
@@ -162,12 +181,12 @@
                 </div>
               </a>
               <h3 class="title">GL Atelier</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">GL Atelier is a sleek portfolio and showcase website designed to present creative work, services, and brand identity through a modern, visually engaging interface focused on user experience and elegant design.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">E-commerce store for clothing and shoes with custom design, advanced animations and scrolling effects, and a smooth shopping experience built on WooCommerce.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="corporate">
               <a href="https://jobmenow.io/" target="_blank" class="portfolio-link">
                 <img src="img/jobmenow.png" alt="Job Me Now" class="img-fluid">
                 <div class="overlay">
@@ -175,12 +194,12 @@
                 </div>
               </a>
               <h3 class="title">Job Me Now</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">JobMeNow is an interactive job discovery platform that connects users with local opportunities through a map-based interface, making it easier to explore nearby jobs, discover career options, and find the right fit quickly and efficiently.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom jobs portal with a map-based interface, advanced listing system, and Whish payment integration — helping users discover local opportunities quickly and efficiently.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="ecommerce">
               <a href="https://mysterybox4u.com/" target="_blank" class="portfolio-link">
                 <img src="img/mystery.png" alt="MysteryBox" class="img-fluid">
                 <div class="overlay">
@@ -188,12 +207,12 @@
                 </div>
               </a>
               <h3 class="title">MysteryBox</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">MysteryBox4U is an upcoming e-commerce platform centered around the thrill of surprise shopping, offering curated mystery boxes filled with random products and designed to deliver an exciting unboxing experience.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">E-commerce platform for curated mystery boxes with advanced integrations including credit card payment, Whish payment, and Wakilni shipping — delivering a seamless surprise shopping experience.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="corporate">
               <a href="https://nihako.com/" target="_blank" class="portfolio-link">
                 <img src="img/nihako.png" alt="Nihako" class="img-fluid">
                 <div class="overlay">
@@ -202,11 +221,11 @@
               </a>
               <h3 class="title">Nihako</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Nihako is a premium interior design and ambience creation platform specializing in high-end, personalized spaces, combining decades of expertise with modern design to deliver elegant, functional environments.</p>
+              <p class="description">Premium interior design website with custom design, multi-page service showcase, and live Instagram feed integration — presenting high-end personalized spaces with elegance.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="shopify">
               <a href="https://lisbeirutco.com/" target="_blank" class="portfolio-link">
                 <img src="img/lis.png" alt="LIS Beirut" class="img-fluid">
                 <div class="overlay">
@@ -214,12 +233,12 @@
                 </div>
               </a>
               <h3 class="title">LIS Beirut</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">Lis Beirut Co. is a modern e-commerce store built on Shopify, offering a streamlined online shopping experience with a focus on simplicity, accessibility, and scalable product management.</p>
+              <span class="tag">Shopify · Web Development</span>
+              <p class="description">Custom-designed Shopify e-commerce store for baby and newborn supplies, offering a streamlined shopping experience with scalable product management.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="custom">
               <a href="https://solaadmin.nl/" target="_blank" class="portfolio-link">
                 <img src="img/sola.png" alt="Solaadmin" class="img-fluid">
                 <div class="overlay">
@@ -227,12 +246,12 @@
                 </div>
               </a>
               <h3 class="title">Solaadmin</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">A fully custom-coded website focused on delivering Soladmin’s information in a structured, clear, and user-friendly way.</p>
+              <span class="tag">Custom Coded · Web Development</span>
+              <p class="description">Fully custom-coded website with advanced animations and scrolling effects, delivering Solaadmin's business profile and services in a polished, high-performance interface.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://johnnyandlea.com/" target="_blank" class="portfolio-link">
                 <img src="img/johnnyandlea.png" alt="Johnny & Lea" class="img-fluid">
                 <div class="overlay">
@@ -245,7 +264,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://the-random-house.com/home/" target="_blank" class="portfolio-link">
                 <img src="img/random.png" alt="The Random House Project" class="img-fluid">
                 <div class="overlay">
@@ -254,11 +273,11 @@
               </a>
               <h3 class="title">The Random House</h3>
               <span class="tag">Web Development</span>
-              <p class="description">The Random House is a one of the well-known shops in both Lebanon and the UAE in the area of furniture, home accessories, ...</p>
+              <p class="description">Custom-designed e-commerce store for a well-known furniture and home accessories retailer operating in both Lebanon and the UAE.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://anat.co" target="_blank" class="portfolio-link">
                 <img src="img/anat.png" alt="ANAT Project" class="img-fluid">
                 <div class="overlay">
@@ -267,11 +286,11 @@
               </a>
               <h3 class="title">Anat</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Anat is a Lebanese-based business development services firm specializing in branding, lead generation, and growth strategies for startups and SMEs.</p>
+              <p class="description">Clean landing page for a Lebanese business development firm specializing in branding, lead generation, and growth strategies for startups and SMEs.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://don-services.com" target="_blank" class="portfolio-link">
                 <img src="img/don.png" alt="Don Services Project" class="img-fluid">
                 <div class="overlay">
@@ -279,12 +298,12 @@
                 </div>
               </a>
               <h3 class="title">Don Services</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">​Dōn Home Maintenance provides premium home and property care services in Lebanon.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom-designed interactive multipage services showcase for a premium home maintenance company in Lebanon, with a clear service structure and strong visual identity.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://dianaghandourstudio.com" target="_blank" class="portfolio-link">
                 <img src="img/dianaghandour.png" alt="Diana Ghandour Project" class="img-fluid">
                 <div class="overlay">
@@ -292,12 +311,12 @@
                 </div>
               </a>
               <h3 class="title">Diana Ghandour</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">​Diana Ghandour Studio is a Beirut-based interior design firm led by Diana Chouaib Ghandour, specializing in creating personalized, artful living spaces that blend modern elegance with emotional well-being.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom-designed business portfolio and services website for a Beirut-based interior design studio, blending modern elegance with a personal, artful aesthetic.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://clelaa.com" target="_blank" class="portfolio-link">
                 <img src="img/clelaa.png" alt="Clelaa Project" class="img-fluid">
                 <div class="overlay">
@@ -305,12 +324,12 @@
                 </div>
               </a>
               <h3 class="title">Clelaa</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">​Clelaa is a Lebanese fashion brand offering contemporary clothing and accessories for women.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom-designed e-commerce clothing shop with advanced animations and scrolling effects for a Lebanese women's fashion brand.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://sgsal.com" target="_blank" class="portfolio-link">
                 <img src="img/sgsal.png" alt="SGSAL Project" class="img-fluid">
                 <div class="overlay">
@@ -318,64 +337,44 @@
                 </div>
               </a>
               <h3 class="title">Smart Guide Agency</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">Smart Guide Agency specializes in custom web development and ongoing site maintenance, providing tailored digital solutions to meet client needs.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Services and portfolio informative website for Smart Guide Agency, showcasing custom web development capabilities and an ongoing client portfolio.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
-              <a href="#" target="_blank" class="portfolio-link">
-                <img src="img/johnnyctaylor.png" alt="Johnny C. Taylor Jr. Project" class="img-fluid">
-                <div class="overlay">
-                  <span class="see-website">See Website</span>
-                </div>
-              </a>
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-link portfolio-private"><img src="img/johnnyctaylor.png" alt="Johnny C. Taylor Jr. Project" class="img-fluid"><div class="overlay private-overlay"><span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span></div></div>
               <h3 class="title">Johnny C. Taylor Jr.</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">Johnny C. Taylor Jr. offers leadership insights and strategic advice, empowering organizations to drive growth and foster inclusive cultures.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom-designed personal website for the CEO of SHRM — one of the world's largest HR societies — featuring leadership insights, speaking engagements, and professional profile.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
-              <a href="#" target="_blank" class="portfolio-link">
-                <img src="img/plastilab.png" alt="Plastilab Project" class="img-fluid">
-                <div class="overlay">
-                  <span class="see-website">See Website</span>
-                </div>
-              </a>
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-link portfolio-private"><img src="img/plastilab.png" alt="Plastilab Project" class="img-fluid"><div class="overlay private-overlay"><span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span></div></div>
               <h3 class="title">Plastilab</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">Plastilab specializes in innovative plastic solutions, providing high-quality materials and services to meet diverse industrial needs.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom-designed 30+ page website with a full product catalog for an innovative plastics solutions company — covering business profile, services, and detailed product listings.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
-              <a href="#" target="_blank" class="portfolio-link">
-                <img src="img/hkp.png" alt="HKP Seattle Project" class="img-fluid">
-                <div class="overlay">
-                  <span class="see-website">See Website</span>
-                </div>
-              </a>
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-link portfolio-private"><img src="img/hkp.png" alt="HKP Seattle Project" class="img-fluid"><div class="overlay private-overlay"><span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span></div></div>
               <h3 class="title">HKP Seattle</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">HKP Seattle delivers exceptional architectural design and planning services, creating innovative, sustainable spaces for communities and businesses.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Custom-designed 30+ page website with advanced animations for a Seattle-based architectural firm — covering business profile, services, events, and project showcases.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
-              <a href="#" target="_blank" class="portfolio-link">
-                <img src="img/trackify.png" alt="Trackify Daily Project" class="img-fluid">
-                <div class="overlay">
-                  <span class="see-website">See Website</span>
-                </div>
-              </a>
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-link portfolio-private"><img src="img/trackify.png" alt="Trackify Daily Project" class="img-fluid"><div class="overlay private-overlay"><span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span></div></div>
               <h3 class="title">Trackify Daily</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Trackify Daily offers advanced tracking solutions to help businesses monitor performance and optimize their daily operations with ease.</p>
+              <p class="description">Custom-designed service introduction page with advanced animations and scrolling effects, presenting Trackify Daily's tracking solutions in an engaging visual format.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="elearning">
               <a href="https://rpsmena.com" target="_blank" class="portfolio-link">
                 <img src="img/rps.png" alt="RPS Project" class="img-fluid">
                 <div class="overlay">
@@ -388,7 +387,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://booming-agency.com" target="_blank" class="portfolio-link">
                 <img src="img/booming.png" alt="Booming Agency Project" class="img-fluid">
                 <div class="overlay">
@@ -396,12 +395,12 @@
                 </div>
               </a>
               <h3 class="title">Booming Agency</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">Booming Agency specializes in digital marketing and brand development, helping businesses grow and thrive in the online space.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Multilingual business profile and services website for a digital marketing agency, built for reach across Arabic and English-speaking markets.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://wearemaverik.com" target="_blank" class="portfolio-link">
                 <img src="img/maverik.png" alt="Maverik Project" class="img-fluid">
                 <div class="overlay">
@@ -410,11 +409,11 @@
               </a>
               <h3 class="title">Maverik</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Maverik creates innovative marketing strategies that elevate brands, focusing on creative solutions to drive engagement and growth.</p>
+              <p class="description">E-commerce clothing shop for a creative marketing brand, with a clean product catalog and a smooth shopping experience.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://rhythmdynamic.com/" target="_blank" class="portfolio-link">
                 <img src="img/rhythymdynamic.png" alt="Rhythm Dynamic Project" class="img-fluid">
                 <div class="overlay">
@@ -423,25 +422,11 @@
               </a>
               <h3 class="title">Rhythm Dynamic</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Rhythm Dynamic offers cutting-edge technology solutions, helping businesses streamline operations and enhance customer engagement through innovative digital tools.</p>
+              <p class="description">E-commerce clothing shop with credit card payment gateway, designed for a dynamic fashion brand with a modern, conversion-focused layout.</p>
             </div>
           </div>
-<!--           Commented out for any copyrights -->
-<!--           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
-              <a href="https://statelessmena.com" target="_blank" class="portfolio-link">
-                <img src="img/stateless.png" alt="Stateless Mena Project" class="img-fluid">
-                <div class="overlay">
-                  <span class="see-website">See Website</span>
-                </div>
-              </a>
-              <h3 class="title">Stateless Mena</h3>
-              <span class="tag">Web Maintenance</span>
-              <p class="description">Stateless MENA is a platform supporting the Research and Advocacy Network on Statelessness in the Middle East and North Africa region.</p>
-            </div>
-          </div> -->
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://ccg-lb.com" target="_blank" class="portfolio-link">
                 <img src="img/ccg.png" alt="CCG Project" class="img-fluid">
                 <div class="overlay">
@@ -449,12 +434,12 @@
                 </div>
               </a>
               <h3 class="title">Consolidated Consultancy Group</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">CCG Lebanon provides expert consulting and innovative business solutions, helping organizations navigate complex challenges and drive sustainable growth.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Business profile and services website for CCG Lebanon, presenting their consulting expertise and organizational structure in a clear, professional format.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="elearning">
               <a href="https://knowledgebox.me" target="_blank" class="portfolio-link">
                 <img src="img/knowledgebox.png" alt="KnowledgeBox Project" class="img-fluid">
                 <div class="overlay">
@@ -462,12 +447,12 @@
                 </div>
               </a>
               <h3 class="title">KnowledgeBox</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">Knowledge Box offers cutting-edge e-learning solutions, empowering individuals and organizations with innovative educational tools and resources.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">LMS platform with online learning features and credit card payment gateway, empowering individuals and organizations with structured e-learning tools and resources.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://ejjeh.com.lb" target="_blank" class="portfolio-link">
                 <img src="img/ejjeh-lb.png" alt="Ejjeh LB Project" class="img-fluid">
                 <div class="overlay">
@@ -475,12 +460,12 @@
                 </div>
               </a>
               <h3 class="title">Ejjeh Lebanon</h3>
-              <span class="tag">Web Development, Web Maintenance</span>
-              <p class="description">A Lebanese fashion retailer offering men's clothing and accessories.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">E-commerce clothing shop for a Lebanese men's fashion retailer, with credit card payment gateway and Aramex shipping integration for seamless local delivery.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://ejjeh.ae" target="_blank" class="portfolio-link">
                 <img src="img/ejjeh-ae.png" alt="Ejjeh UAE Project" class="img-fluid">
                 <div class="overlay">
@@ -488,12 +473,12 @@
                 </div>
               </a>
               <h3 class="title">Ejjeh UAE</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">A UAE-based fashion retailer specializing in men's clothing and accessories.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">E-commerce clothing shop for a UAE-based men's fashion retailer, with credit card payment gateway and a clean, conversion-optimized storefront.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://stroberry-adv.com" target="_blank" class="portfolio-link">
                 <img src="img/stroberry.png" alt="Stro'berry Project" class="img-fluid">
                 <div class="overlay">
@@ -501,12 +486,12 @@
                 </div>
               </a>
               <h3 class="title">Stro'berry Advertising</h3>
-              <span class="tag">Web Development</span>
-              <p class="description">A Lebanese creative advertising agency providing branding, digital media, PR, and marketing services.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Services and portfolio informative website for a Lebanese creative advertising agency, showcasing branding, digital media, PR, and marketing work.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://metsenergy.com" target="_blank" class="portfolio-link">
                 <img src="img/mets.png" alt="METS Project" class="img-fluid">
                 <div class="overlay">
@@ -514,12 +499,12 @@
                 </div>
               </a>
               <h3 class="title">METS Energy</h3>
-              <span class="tag">Web Maintenance</span>
-              <p class="description">METS Energy is a Lebanese company specializing in diesel generators and power solutions, offering products and services in diesel, solar, hydro, and hybrid energy.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">A 20+ page business profile and product catalog website (non-e-commerce) for a Lebanese energy company covering diesel, solar, hydro, and hybrid power solutions.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://rlx.com.lb" target="_blank" class="portfolio-link">
                 <img src="img/rlx.png" alt="RLX Project" class="img-fluid">
                 <div class="overlay">
@@ -528,11 +513,11 @@
               </a>
               <h3 class="title">RLX</h3>
               <span class="tag">Web Development</span>
-              <p class="description">RLX Logistics offers comprehensive logistics solutions including freight forwarding, warehousing, customs clearance, and supply chain management, serving clients globally with a focus on efficiency and reliability.</p>
+              <p class="description">Informative services website for RLX Logistics, presenting freight forwarding, warehousing, customs clearance, and supply chain management with a clean, professional layout.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://wahdatouna.org" target="_blank" class="portfolio-link">
                 <img src="img/wahdatouna.png" alt="Wahdatouna Project" class="img-fluid">
                 <div class="overlay">
@@ -540,12 +525,12 @@
                 </div>
               </a>
               <h3 class="title">Wahdatouna Khalasouna</h3>
-              <span class="tag">Web Maintenance</span>
-              <p class="description">Wahdatouna is a Lebanese civil society group dedicated to strengthening civil peace, protecting human rights, and promoting dialogue and acceptance among diverse communities.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Multilingual informative website for a Lebanese civil society organization, supporting civil peace, human rights, and community dialogue across Arabic and English audiences.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://rainmakersemea.com" target="_blank" class="portfolio-link">
                 <img src="img/rainmakers.png" alt="Rainmakers Project" class="img-fluid">
                 <div class="overlay">
@@ -554,11 +539,11 @@
               </a>
               <h3 class="title">Rainmakers</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Rainmakers EMEA specializes in driving business growth through digital marketing, sales strategies, and performance optimization, delivering impactful results across the EMEA region.</p>
+              <p class="description">One-page scrolling informative website for Rainmakers EMEA, presenting their digital growth and performance services in a clean, modern layout.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://alyafi-ip.com" target="_blank" class="portfolio-link">
                 <img src="img/alyafi.png" alt="Alyafi Project" class="img-fluid">
                 <div class="overlay">
@@ -566,12 +551,12 @@
                 </div>
               </a>
               <h3 class="title">Alyafi IP Group</h3>
-              <span class="tag">Web Maintenance, Web Development</span>
-              <p class="description">Alyafi IP offers intellectual property services, specializing in trademark registration, patent protection, and legal consultation to safeguard innovations and brand identities.</p>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">A 30+ page business profile and services website for an intellectual property firm, covering trademark registration, patent protection, events, and legal consultation across multiple practice areas.</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item hidden">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://cedra.tech" target="_blank" class="portfolio-link">
                 <img src="img/cedra.png" alt="Cedra Tech Project" class="img-fluid">
                 <div class="overlay">
@@ -580,11 +565,94 @@
               </a>
               <h3 class="title">Cedra Tech</h3>
               <span class="tag">Web Development</span>
-              <p class="description">Cedra Tech provides cutting-edge technology solutions, specializing in custom software development, IT consulting, and digital transformation to enhance business performance and efficiency.</p>
+              <p class="description">Informative services website for Cedra Tech, presenting custom software development, IT consulting, and digital transformation offerings in a structured, professional format.</p>
+            </div>
+          </div>
+                    <!-- Kite Studio -->
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-no-img portfolio-private">
+                <div class="placeholder-img"><i class="bi bi-image"></i><span>Image Coming Soon</span></div>
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">Kite Studio</h3>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">Kite Studio is a creative Lebanese studio offering design services and showcasing a curated portfolio of work, presented through a clean and modern informative website.</p>
+            </div>
+          </div>
+          <!-- SG Academy -->
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="elearning">
+              <div class="portfolio-no-img portfolio-private">
+                <div class="placeholder-img"><i class="bi bi-image"></i><span>Image Coming Soon</span></div>
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">SG Academy</h3>
+              <span class="tag">Web Development · Web Maintenance</span>
+              <p class="description">SG Academy is an LMS platform offering online graphic design courses across the MENA region, featuring structured learning paths, course management, and a seamless student experience.</p>
+            </div>
+          </div>
+          <!-- Stateless MENA -->
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-no-img portfolio-private">
+                <img src="img/stateless.png" alt="Stateless Project" class="img-fluid">
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">Stateless MENA</h3>
+              <span class="tag">Web Renovation · Web Maintenance</span>
+              <p class="description">A comprehensive online hub launched by the AUB Issam Fares Institute in collaboration with regional partners, focusing on citizenship and statelessness in the Arab world — featuring research, policy resources, and multilingual content.</p>
+            </div>
+          </div>
+          <!-- FDP AUB -->
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-no-img portfolio-private">
+                <img src="img/fdp.png" alt="FDP Project" class="img-fluid">
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">Forced Displacement Program — AUB</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">The AUB Forced Displacement Program website, built under the Issam Fares Institute and Faculty of Health Sciences, provides a research and policy hub focused on refugees and internally displaced persons in Lebanon and the broader region.</p>
+            </div>
+          </div>
+          <!-- AUB Catalogs -->
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="corporate">
+              <div class="portfolio-no-img portfolio-private">
+                <img src="img/aub.png" alt="AUB Catalogs Project" class="img-fluid">
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">AUB Undergraduate &amp; Graduate Catalogs</h3>
+              <span class="tag">Web Development</span>
+              <p class="description">Large-scale academic catalog websites for the American University of Beirut, covering multiple faculties with structured, responsive, and SEO-friendly layouts for both undergraduate and graduate programs.</p>
             </div>
           </div>
         </div>
         <button id="loadMore">Load More</button>
+        <br><br>
+                  <!-- Digital Revamp Maintenance Callout -->
+          <div class="col-12 mb-4">
+            <div class="maintenance-callout" data-category="corporate">
+              <div class="maintenance-callout-inner">
+                <div class="maintenance-icon"><i class="bi bi-tools"></i></div>
+                <div class="maintenance-text">
+                  <h4>30+ Websites Maintained</h4>
+                  <p>While working with Digital Revamp, I was responsible for the monthly maintenance of 30+ client websites — predominantly US and UAE-based businesses including <strong>SHRM Emily M. Dickens, Ram Charan, Tantus Tech, Gold Fish, LPDC, Emagine, CPC, Shanker, Fahed Lab, Ras Al Khaimah</strong>, and more. This covered performance monitoring, plugin/theme updates, bug fixing, security hardening, and uptime assurance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
     <!-- Services Section -->

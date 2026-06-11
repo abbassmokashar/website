@@ -126,6 +126,7 @@
         <!-- Filter Buttons -->
         <div class="portfolio-filters mb-4">
           <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="saas">SAAS</button>
           <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
           <button class="filter-btn" data-filter="corporate">Corporate &amp; Informative</button>
           <button class="filter-btn" data-filter="elearning">E-learning &amp; LMS</button>
@@ -133,6 +134,35 @@
           <button class="filter-btn" data-filter="custom">Custom Coded</button>
         </div>
         <div class="row" id="portfolio-grid">
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="saas">
+              <div class="portfolio-no-img portfolio-private">
+                <img src="img/mindset.png" alt="Mindset Cafe" class="img-fluid">
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">Mindset Cafe</h3>
+              <span class="tag">Software Development</span>
+              <p class="description">Mindset Cafe is a Windows-based Node.js POS and café management system, offering features like order taking, gaming station management, inventory, accounting, and reporting through a React frontend backed by a SQLite database.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="portfolio-grid">
+          <div class="col-md-4 mb-4">
+            <div class="portfolio-item hidden" data-category="saas">
+              <div class="portfolio-no-img portfolio-private">
+                <img src="img/doctor.png" alt="Doctor Clinic" class="img-fluid">
+                <div class="overlay private-overlay">
+                  <span class="private-badge"><i class="bi bi-lock-fill"></i> Private Project</span>
+                </div>
+              </div>
+              <h3 class="title">Doctor Clinic</h3>
+              <span class="tag">Software Development</span>
+              <p class="description">Doctor Clinic is a full-stack JavaScript clinic management system (Node.js/Express + React + PostgreSQL via Prisma), covering patient and doctor management, appointment scheduling, medical records, prescriptions, invoicing, department organization, doctor schedules, and WhatsApp-based appointment reminders.</p>
+            </div>
+          </div>
+        </div>
           <div class="col-md-4 mb-4">
             <div class="portfolio-item" data-category="ecommerce">
               <a href="https://ehsas.store/" target="_blank" class="portfolio-link">
@@ -225,7 +255,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item" data-category="ecommerce">
+            <div class="portfolio-item hidden" data-category="ecommerce">
               <a href="https://mysterybox4u.com/" target="_blank" class="portfolio-link">
                 <img src="img/mystery.png" alt="MysteryBox" class="img-fluid">
                 <div class="overlay">
@@ -238,7 +268,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="portfolio-item" data-category="corporate">
+            <div class="portfolio-item hidden" data-category="corporate">
               <a href="https://nihako.com/" target="_blank" class="portfolio-link">
                 <img src="img/nihako.png" alt="Nihako" class="img-fluid">
                 <div class="overlay">

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Abbass Mokashar · WordPress, Shopify, Framer & Custom Web Developer in Beirut, Lebanon. Building websites that convert." />
+    <title>Abbass Mokashar · Web Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="apple-touch-icon" href="favicon-180.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Theme init: applies saved/OS theme before paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-logo">AM<span>.</span></div>
+        <div class="preloader-bar"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+        <div class="preloader-count" id="preloaderCount">0%</div>
+      </div>
+    </div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== FLOATING SOCIALS ===== -->
+    <div class="floating-socials">
+      <a href="https://www.linkedin.com/in/abbass-mokashar-185865254/" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a href="https://wa.me/+96181069710" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.9 7c0 5.45-4.44 9.87-9.91 9.87zm8.42-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.47-8.41z"/></svg>
+      </a>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-logo">Abbass<span>.</span></a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#work" class="nav-link">Work</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#saas-products" class="nav-link">SaaS</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <a href="https://calendly.com/abbassmokashar123/30min" target="_blank" class="nav-cta">Book a Call</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="hero">
+        <div class="hero-bg">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="hero-grid"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <p class="hero-eyebrow reveal">WordPress · Shopify · Framer &amp; Custom Development · Beirut, Lebanon</p>
+            <h1 class="hero-title" id="heroTitle">
+              <span class="line"><span class="word">I</span> <span class="word">Build</span></span>
+              <span class="line"><span class="word">Websites</span> <span class="word accent-word">That</span></span>
+              <span class="line"><span class="word accent-word">Convert</span><span class="hero-dot">.</span></span>
+            </h1>
+            <p class="hero-subtitle reveal">Custom websites for businesses across Lebanon, the UAE, and beyond, built for performance, SEO, and real results.</p>
+            <div class="hero-roles reveal">
+              <span class="roles-prefix">Specializing in</span>
+              <span class="roles-type" id="rolesType"></span>
+            </div>
+            <div class="hero-cta reveal">
+              <a href="#work" class="btn btn-primary">See My Work
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+              <a href="https://calendly.com/abbassmokashar123/30min" target="_blank" class="btn btn-ghost">Book a Free Call</a>
+            </div>
+            <div class="hero-socials reveal">
+              <a href="https://www.linkedin.com/in/abbass-mokashar-185865254/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+              <span class="hero-socials-dot">•</span>
+              <a href="https://wa.me/+96181069710" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+              <span class="hero-socials-dot">•</span>
+              <a href="mailto:abbassmokashar123@gmail.com" aria-label="Email">Email</a>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <div class="hero-photo" id="heroPhoto">
+              <div class="hero-photo-clip">
+                <img src="img/portrait.webp" alt="Abbass Mokashar — Web Developer" />
+                <div class="hero-photo-shine"></div>
+              </div>
+              <div class="hero-badge hero-badge-1"><span class="badge-icon">✦</span> 4+ Years<br /><em>Experience</em></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="container">
+          <div class="stats-bar">
+            <div class="stat-item">
+              <span class="stat-number" data-count="70" data-suffix="+">0</span>
+              <span class="stat-label">Websites Built</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="44" data-suffix="+">0</span>
+              <span class="stat-label">Sites Maintained Monthly</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="4" data-suffix="+">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number stat-globe">🌍</span>
+              <span class="stat-label">Clients Worldwide</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-hint" aria-label="Scroll down">
+          <span class="scroll-hint-mouse"><span class="scroll-hint-wheel"></span></span>
+        </a>
+      </section>
+
+      <!-- ===== MARQUEE ===== -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>WordPress</span><i>✦</i><span>Shopify</span><i>✦</i><span>Framer</span><i>✦</i><span>Custom Development</span><i>✦</i><span>SaaS</span><i>✦</i><span>LMS</span><i>✦</i><span>E-commerce</span><i>✦</i><span>Web Maintenance</span><i>✦</i><span>Performance</span><i>✦</i><span>SEO</span><i>✦</i>
+          <span>WordPress</span><i>✦</i><span>Shopify</span><i>✦</i><span>Framer</span><i>✦</i><span>Custom Development</span><i>✦</i><span>SaaS</span><i>✦</i><span>LMS</span><i>✦</i><span>E-commerce</span><i>✦</i><span>Web Maintenance</span><i>✦</i><span>Performance</span><i>✦</i><span>SEO</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">01 · About</span>
+            <h2 class="section-title">The developer<br />behind the <em>pixels</em>.</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-photo" id="aboutPhoto">
+              <img src="img/portrait.webp" alt="Abbass Mokashar portrait" />
+              <div class="about-photo-shine"></div>
+            </div>
+            <div class="about-text">
+              <p class="lead-text">As a seasoned web developer with a robust background in both WordPress and custom website development, I specialize in creating <b>high-performance, scalable, and visually captivating</b> digital solutions.</p>
+              <p>Over the course of my career, I have successfully designed, developed, and launched more than 70 diverse websites, each tailored to meet the unique needs of my clients and the companies I worked with <b>Smart Guide, Digital Revamp, Stro'berry Advertising</b>. My expertise spans front-end and back-end development, ensuring every project is optimized for both user experience and technical efficiency.</p>
+              <p>Driven by a passion for innovation, I stay at the forefront of emerging web technologies, consistently refining my skills to deliver cutting-edge solutions. With a meticulous eye for detail and a focus on long-term impact, I'm dedicated to delivering web experiences that not only meet but <b>exceed client expectations</b>.</p>
+              <p>Alongside WordPress and custom development, I'm also experienced in <b>Framer</b>, building fast, beautifully designed landing pages and product showcases for SaaS and e-commerce brands.</p>
+              <div class="about-chips">
+                <span class="chip">WordPress</span>
+                <span class="chip">Shopify</span>
+                <span class="chip">Framer</span>
+                <span class="chip">Custom Code</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">React</span>
+                <span class="chip">SaaS</span>
+                <span class="chip">E-commerce</span>
+              </div>
+              <a href="files/Abbass Mokashar - Resume.pdf" download class="btn btn-primary">Download My CV
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURED WORK (horizontal scroll) ===== -->
+      <section class="section featured" id="work">
+        <div class="container section-head featured-head">
+          <span class="section-tag">02 · Featured Work</span>
+          <h2 class="section-title">Selected<br /><em>projects.</em></h2>
+        </div>
+
+        <div class="hscroll-wrap" id="hscrollWrap">
+          <div class="hscroll-track" id="hscrollTrack">
+            <!-- Featured cards injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ALL PROJECTS ===== -->
+      <section class="section projects" id="portfolio">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">03 · Portfolio</span>
+            <h2 class="section-title">Everything<br />I've <em>built.</em></h2>
+          </div>
+
+          <div class="portfolio-filters" id="portfolioFilters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="saas">SaaS</button>
+            <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="elearning">E-learning</button>
+            <button class="filter-btn" data-filter="shopify">Shopify</button>
+            <button class="filter-btn" data-filter="custom">Custom Coded</button>
+            <button class="filter-btn" data-filter="framer">Framer</button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid"></div>
+          <div class="projects-more">
+            <button class="btn btn-ghost" id="loadMoreBtn">Load More Projects</button>
+          </div>
+
+          <!-- Maintenance callout -->
+          <div class="maintenance-callout" id="maintenanceCallout">
+            <div class="maintenance-icon">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="maintenance-text">
+              <h4>30+ Websites Maintained</h4>
+              <p>While working with <b>Digital Revamp</b>, I was responsible for the monthly maintenance of 30+ client websites, predominantly US and UAE-based businesses including <b>SHRM Emily M. Dickens, Ram Charan, Tantus Tech, Gold Fish, LPDC, Emagine, CPC, Shanker, Fahed Lab, Ras Al Khaimah</b>, and more. This covered performance monitoring, plugin/theme updates, bug fixing, security hardening, and uptime assurance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SAAS PROMO ===== -->
+      <section class="section saas" id="saas-products">
+        <div class="container">
+          <div class="saas-inner">
+            <div class="saas-glow"></div>
+            <span class="section-tag">Ready-Made Business Software</span>
+            <h2 class="section-title">Explore My<br /><em>SaaS Products</em></h2>
+            <p>Beyond custom websites, I also build and sell ready-to-use SaaS software, including café/POS and clinic management systems, plus custom dashboards, client portals, and workflow tools for businesses that need more than a simple website.</p>
+            <a href="https://abbass-systems.framer.website/" target="_blank" class="btn btn-primary">Visit SaaS Products
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES ===== -->
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">04 · Services</span>
+            <h2 class="section-title">What I can<br /><em>do for you.</em></h2>
+          </div>
+          <div class="services-grid">
+            <div class="service-card" id="web-development">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg>
+              </div>
+              <h3>Web Development</h3>
+              <p>Looking for custom web development services? I specialize in building modern, responsive websites tailored to your business needs: custom e-commerce, portfolio, or corporate platforms that look great and are optimized for performance, speed, and SEO.</p>
+              <a href="mailto:abbassmokashar123@gmail.com?subject=Request for a Web Development Quote" class="service-link">Get a Quote
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </div>
+            <div class="service-card" id="web-maintenance">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+              </div>
+              <h3>Website Maintenance</h3>
+              <p>Keep your website running smoothly and securely with professional maintenance services. My packages include regular updates, security patches, performance improvements, and bug fixes, ensuring your site operates at its best and stays ahead of risks.</p>
+              <a href="mailto:abbassmokashar123@gmail.com?subject=Request for a Web Maintenance Quote" class="service-link">Get a Quote
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </div>
+            <div class="service-card" id="web-consulting">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3>Web Consulting &amp; Assistance</h3>
+              <p>Expert web consultation whether you're unsure which platform to choose or need help optimizing for SEO. I'll help you pick the right tools, strategies, and technologies to enhance your online presence and drive real results.</p>
+              <a href="mailto:abbassmokashar123@gmail.com?subject=Request for a Consultation & Assistance Quote" class="service-link">Get a Quote
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== CONTACT / FOOTER ===== -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-cta">
+          <span class="section-tag">05 · Contact</span>
+          <h2 class="footer-title">Let's build something <em>great</em> together.</h2>
+          <p>Have a project in mind? Let's talk about how I can help you launch, grow, or maintain it.</p>
+          <a href="mailto:abbassmokashar123@gmail.com" class="btn btn-primary btn-lg">Start a Project
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </a>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#hero" class="footer-logo">Abbass<span>.</span></a>
+            <p class="footer-about">I'm Abbass Mokashar, a passionate web developer creating high-performance, user-centric digital solutions. With over 70 successful projects, I specialize in custom web development and maintenance.</p>
+          </div>
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#work">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="files/Abbass Mokashar - Resume.pdf" download>Download My CV</a></li>
+              <li><a href="https://calendly.com/abbassmokashar123/30min" target="_blank">Schedule a Consultation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="mailto:abbassmokashar123@gmail.com">abbassmokashar123@gmail.com</a></li>
+              <li><a href="tel:+96181069710">+961 81 069 710</a></li>
+              <li>Beirut, Lebanon</li>
+              <li>Mon to Fri, 9 AM to 5 PM (GMT+2)</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Socials</h5>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/abbass-mokashar-185865254/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://wa.me/+96181069710" target="_blank">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Abbass Mokashar. All Rights Reserved.</p>
+          <button id="goToTopBtn" class="go-to-top" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
